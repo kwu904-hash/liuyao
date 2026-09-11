@@ -3,7 +3,7 @@
 京房纳甲六爻 **计算核**：你提供六次铜钱正反与起卦时刻，本库算出本卦 / 变卦 / 纳甲 / 六亲 / 六神 / 世应 / 伏神 / 旬空 / 日冲月冲 / 进退神。
 
 ```bash
-npm i @getastralium/liuyao
+npm i @astralium/liuyao
 ```
 
 用于 [getastralium.com](https://getastralium.com)。**Astralium** 是商标。本库是可独立安装的计算核，**不是**托管站、也不是网站源码。
@@ -23,7 +23,7 @@ MIT License。不算命。不自动摇卦。不输出吉凶断语。
 
 也不做：日破/暗动断语、完整出伏、变卦伏神、学堂文章。
 
-对外只保证 **包入口** `@getastralium/liuyao` 的导出（`buildLiuyaoChart` 与同文件 re-export 的类型/辅助函数）。深层路径如 `src/hexagram/...` 不是稳定 API。
+对外只保证 **包入口** `@astralium/liuyao` 的导出（`buildLiuyaoChart` 与同文件 re-export 的类型/辅助函数）。深层路径如 `src/hexagram/...` 不是稳定 API。
 
 ## 铜钱口径（必须按此传入）
 
@@ -46,7 +46,7 @@ MIT License。不算命。不自动摇卦。不输出吉凶断语。
 ## 最小可运行例子
 
 ```ts
-import { buildLiuyaoChart } from "@getastralium/liuyao";
+import { buildLiuyaoChart } from "@astralium/liuyao";
 
 const chart = buildLiuyaoChart({
   throws: [
@@ -69,7 +69,7 @@ console.log(chart.meta.engine);                 // astralium-liuyao-jingfang-v1
 `LiuYaoChartData`、`FuShenEntry`、`LineTransform`、`LiuQin`、`AdvanceRetreat` 等类型均从包入口 re-export，可直接：
 
 ```ts
-import type { FuShenEntry, LiuQin, LineTransform } from "@getastralium/liuyao";
+import type { FuShenEntry, LiuQin, LineTransform } from "@astralium/liuyao";
 ```
 
 日期/时间格式不对时，错误信息会带上你传入的值，并给出 `YYYY-MM-DD` / `HH:mm` 示例。
