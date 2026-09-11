@@ -1,0 +1,50 @@
+{
+  "name": "@astralium/liuyao",
+  "version": "0.1.0",
+  "description": "Astralium Liu Yao (京房纳甲六爻) calculation core: coin faces → structured hexagram. No interpretation, no auto-cast.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwu904-hash/liuyao.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kwu904-hash/liuyao/issues"
+  },
+  "homepage": "https://github.com/kwu904-hash/liuyao#readme",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "verify": "tsx scripts/verify.ts",
+    "prepack": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "lunar-javascript": "^1.7.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.3",
+    "tsup": "^8.5.0",
+    "tsx": "^4.22.4",
+    "typescript": "~5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
