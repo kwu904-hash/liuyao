@@ -1,6 +1,6 @@
 {
   "name": "@astralium/liuyao",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Astralium Liu Yao (京房纳甲六爻) calculation core: coin faces → structured hexagram. No interpretation, no auto-cast.",
   "license": "MIT",
   "repository": {
